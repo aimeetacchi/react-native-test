@@ -14,24 +14,27 @@ export default class Main extends Component {
 
     componentDidMount() {
    
-                   
-                    let username = 'codetest1';
-                    let password = 'codetest100';
+        let username = 'codetest1';
+        let password = 'codetest100';
+        
+        let authString = `${username}:${password}`
+        let headers = new Headers();
 
-                    fetch('https://app.qudini.com/api/queue/gj9fs', {   
-                        credentials: 'include',
-                        headers: new Headers({
-                          "Content-Type": "text/plain",
-                          'Authorization': 'Basic ' + btoa(username + ":" + password),
-                        })
-                      })
-                      .then((response) => response.json())
-                      .then((responseJson) => {
-                          console.log(responseJson, 'res JSON');
-                      })
-                      .catch((error) => {
-                          console.error(error);
-                      });
+        
+        headers.set('Authorization', 'Basic ' + btoa(authString), )
+
+        fetch('https://app.qudini.com/api/queue/gj9fs', {
+            method: 'GET',
+            mode : 'no-cors',
+            headers: headers,
+        })
+            .then(function (response) {
+                console.log (response)
+            
+            })
+            .catch((error) => {
+                console.error(error);
+            });
                       
 
     }
