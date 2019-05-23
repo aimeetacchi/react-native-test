@@ -17,21 +17,15 @@ export default class Main extends Component {
         let username = 'codetest1';
         let password = 'codetest100';
         
-        let authString = `${username}:${password}`
-        let headers = new Headers();
-
-        
-        headers.set('Authorization', 'Basic ' + btoa(authString), )
-
-        fetch('https://app.qudini.com/api/queue/gj9fs', {
-            method: 'GET',
-            mode : 'no-cors',
-            headers: headers,
-        })
-            .then(function (response) {
-                console.log (response)
-            
+        fetch('https://cors-anywhere.herokuapp.com/https://app.qudini.com/api/queue/gj9fs', {   
+            headers: new Headers({
+                'Authorization': 'Basic ' + btoa(username + ":" + password),
             })
+        })
+        .then((response) => response.json())
+        .then((responseJson) => {
+            console.log(responseJson, 'res JSON');
+        })
             .catch((error) => {
                 console.error(error);
             });
