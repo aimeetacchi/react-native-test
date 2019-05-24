@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Header extends Component {
 
@@ -6,7 +6,7 @@ export default class Header extends Component {
     render() {
         return (
             <header>
-                header
+                Queue Data
             </header>
         )
     }

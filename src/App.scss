@@ -20,3 +20,23 @@ body {
 h1, h2, h3, h4, h5 {
   color: $color1;
 }
+
+header {
+  background-color: rgb(43, 43, 43);
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.customerDetails {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 10px 0;
+
+  h2,h3 { margin: 0; padding: 0;}
+  
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
