@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Gravatar from 'react-gravatar';
 
 export default class Customer extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class Customer extends Component {
             <div className="customerDetails">
             {/* checking if there is a first name if not use name */}
              <h2>{firstName ? firstName+surname : name }</h2>
-             <img src="" alt=""/>
+            { emailAddress ? <Gravatar email={emailAddress} size={150}/> : <img style={{width: '150px'}} src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y" alt="gravatar"/>}
              <h3>{emailAddress}</h3>
              <p>{expectedTime}</p>
             </div>
