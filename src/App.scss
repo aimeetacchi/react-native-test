@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5 {
 }
 
 header {
-  background-color: rgb(43, 43, 43);
+  background-color: $color_dark;
   padding: 20px;
   color: #fff;
   box-shadow: 0 4px 2px -2px gray;
@@ -39,4 +39,29 @@ header {
     margin: 0;
     padding: 0;
   }
+}
+
+.filter_form {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 10px auto;
+
+  input {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 0;
+    
+  }
+  input[type=submit] {
+    width: 50%;
+    border-radius: 0;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color:$color_dark;
+    color: white;
+  }
+  
+
 }
